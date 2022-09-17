@@ -88,6 +88,7 @@ module Sprockets
           ].join(':')
       end
 
+      # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
       def call(input)
         context = input[:environment].context_class.new(input)
 
@@ -128,6 +129,7 @@ module Sprockets
 
         context.metadata.merge(data: css, map: map, sass_dependencies: sass_dependencies)
       end
+      # rubocop:enable Metrics/AbcSize, Metrics/MethodLength
 
       private
 
