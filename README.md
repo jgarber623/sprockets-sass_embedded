@@ -26,7 +26,7 @@ gem install sprockets-sass_embedded
 
 ## Usage
 
-sprockets-sass_embedded works with projects leveraging Sprockets 4 for asset processing. With minimal configuration changes, [Ruby on Rails](https://rubyonrails.org), [Sinatra](https://sinatrarb.com), and [Roda](http://roda.jeremyevans.net) applications can take advantage of the feautres in the recent versions of Dart Sass.
+sprockets-sass_embedded works with projects leveraging Sprockets 4 for asset processing. With minimal configuration changes, [Ruby on Rails](https://rubyonrails.org), [Sinatra](https://sinatrarb.com), and [Roda](http://roda.jeremyevans.net) applications can take advantage of the features in recent versions of Dart Sass. sprockets-sass_embedded uses [Natsuki](https://github.com/ntkme)'s [sass-embedded](https://github.com/ntkme/sass-embedded-host-ruby) gem whose platform-specific releases closely track (and match version-for-version) the official [dart-sass](https://github.com/sass/dart-sass) project's releases.
 
 The examples below assume a Sass file named `application.scss` located in the assets path (e.g. `app/assets/stylesheets/application.scss`) appropriate for your app's framework. Asset paths are highly configurable, so the location of your asset files may vary.
 
