@@ -102,6 +102,8 @@ h1 {
 
 sprockets-sass_embedded implements [Natsuki](https://github.com/ntkme)'s work from [rails/sprockets#737](https://github.com/rails/sprockets/pull/737) and wouldn't exist if not for their work bringing Dart Sass to Sprockets-enabled Ruby projects. Sprockets' internal workings are _fairly_ complicated, so the [Extending Sprockets guide](https://github.com/rails/sprockets/blob/main/guides/extending_sprockets.md) was also helpful.
 
+sprockets-sass_embedded is written and maintained by [Jason Garber](https://sixtwothree.org).
+
 ## License
 
 sprockets-sass_embedded is freely available under the [MIT License](https://opensource.org/licenses/MIT). Use it, learn from it, fork it, improve it, change it, tailor it to your needs.
