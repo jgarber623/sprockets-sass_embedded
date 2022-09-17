@@ -1,0 +1,11 @@
+@use 'vars';
+
+@import 'html';
+
+body {
+  background: vars.$color-silver;
+
+  a {
+    text-decoration: underline
+  }
+}

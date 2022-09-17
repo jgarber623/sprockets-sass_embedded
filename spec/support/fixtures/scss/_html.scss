@@ -1,0 +1,5 @@
+@use 'vars';
+
+html {
+  font-size: vars.$font-size;
+}
