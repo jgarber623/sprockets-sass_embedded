@@ -22,7 +22,7 @@ module Sprockets
                                    .parameters
                                    .filter_map { |parameter| "$#{parameter.last}" if parameter.first == :req }
 
-              obj["#{symbol}(#{parameters.join(', ')})"] = ->(args) { instance.send(symbol, *args) }
+              obj["#{symbol}(#{parameters.join(', ')})"] = ->(args) { instance.public_send(symbol, *args) }
             end
         end
 
