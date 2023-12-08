@@ -6,16 +6,16 @@ module Sprockets
     #
     # @example Using the default options.
     #
-    #   environment.register_bundle_processor 'text/css',
+    #   environment.register_bundle_processor "text/css",
     #     Sprockets::SassEmbedded::SassCompressor
     #
     # @example Passing options to the SassEmbedded compiler.
     #
-    #   environment.register_bundle_processor 'text/css',
+    #   environment.register_bundle_processor "text/css",
     #     Sprockets::SassEmbedded::SassCompressor.new({ ... })
     #
     class SassCompressor
-      VERSION = '1'
+      VERSION = "1"
 
       private_constant :VERSION
 
@@ -52,7 +52,7 @@ module Sprockets
             Autoload::SassEmbedded::Embedded::VERSION,
             VERSION,
             DigestUtils.digest(@options)
-          ].join(':')
+          ].join(":")
       end
 
       # @param input [Hash]
