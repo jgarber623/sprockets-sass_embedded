@@ -4,7 +4,7 @@ RSpec.describe Sprockets::SassEmbedded do
   subject(:env) { Sprockets::Environment.new }
 
   let(:css) do
-    <<~"CSS".chomp
+    <<~CSS.chomp
       html {
         font-size: 1rem;
       }
