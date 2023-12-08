@@ -70,11 +70,12 @@ module Sprockets
         @cache_version = cache_version
         @sass_config = sass_config
 
-        @functions = Module.new do
-          include Functions
-          include functions if functions
-          class_eval(&block) if block_given?
-        end
+        @functions =
+          Module.new do
+            include Functions
+            include functions if functions
+            class_eval(&block) if block_given?
+          end
       end
 
       # @return [String]
