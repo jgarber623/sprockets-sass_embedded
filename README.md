@@ -77,7 +77,7 @@ run App.freeze.app
 
 ## Asset Helpers
 
-sprockets-sass-embedded includes a number of familiar helpers (e.g. `image_path`, `image_url`, `font_path`, `font_url`) that generate asset paths for use in your application. See [the `Functions` module](https://github.com/jgarber623/sprockets-sass_embedded/blob/main/lib/sprockets/sass_embedded/sass_processor.rb#L144-L318) in `lib/sprockets/sass_embedded/sass_processor.rb` for the available helpers.
+sprockets-sass_embedded includes a number of familiar helpers (e.g. `image_path`, `image_url`, `font_path`, `font_url`) that generate asset paths for use in your application. See [the `Functions` module](https://github.com/jgarber623/sprockets-sass_embedded/blob/main/lib/sprockets/sass_embedded/sass_processor.rb#L147-L321) in `lib/sprockets/sass_embedded/sass_processor.rb` for the available helpers.
 
 ```scss
 @font-face {
