@@ -22,7 +22,7 @@ module Sprockets
                                    .parameters
                                    .filter_map { |parameter| "$#{parameter.last}" if parameter.first == :req }
 
-              obj["#{symbol}(#{parameters.join(', ')})"] = ->(args) { instance.send(symbol, *args) }
+              obj["#{symbol}(#{parameters.join(', ')})"] = ->(args) { instance.public_send(symbol, *args) }
             end
         end
 
@@ -37,7 +37,7 @@ module Sprockets
 
       private_constant :DartSassFunctionsHash
 
-      VERSION = '1'
+      VERSION = "1"
 
       private_constant :VERSION
 
@@ -70,11 +70,12 @@ module Sprockets
         @cache_version = cache_version
         @sass_config = sass_config
 
-        @functions = Module.new do
-          include Functions
-          include functions if functions
-          class_eval(&block) if block_given?
-        end
+        @functions =
+          Module.new do
+            include Functions
+            include functions if functions
+            class_eval(&block) if block_given?
+          end
       end
 
       # @return [String]
@@ -85,7 +86,7 @@ module Sprockets
             VERSION,
             Autoload::SassEmbedded::Embedded::VERSION,
             @cache_version
-          ].join(':')
+          ].join(":")
       end
 
       # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
@@ -121,7 +122,7 @@ module Sprockets
         result.loaded_urls.each do |url|
           scheme, _host, path, _query = URIUtils.split_file_uri(url)
 
-          next unless scheme == 'file'
+          next unless scheme == "file"
 
           sass_dependencies << path
           context.metadata[:dependencies] << URIUtils.build_file_digest_uri(path)

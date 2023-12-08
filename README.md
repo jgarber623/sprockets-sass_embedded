@@ -1,27 +1,25 @@
 # sprockets-sass_embedded
 
+**A Ruby gem for processing and compressing [Sass](https://sass-lang.com) files using [Sprockets 4](https://github.com/rails/sprockets) and [Embedded Dart Sass](https://github.com/ntkme/sass-embedded-host-ruby).**
+
 [![Gem](https://img.shields.io/gem/v/sprockets-sass_embedded.svg?logo=rubygems&style=for-the-badge)](https://rubygems.org/gems/sprockets-sass_embedded)
 [![Downloads](https://img.shields.io/gem/dt/sprockets-sass_embedded.svg?logo=rubygems&style=for-the-badge)](https://rubygems.org/gems/sprockets-sass_embedded)
 [![Build](https://img.shields.io/github/actions/workflow/status/jgarber623/sprockets-sass_embedded/ci.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/jgarber623/sprockets-sass_embedded/actions/workflows/ci.yml)
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/sprockets-sass_embedded.svg?logo=code-climate&style=for-the-badge)](https://codeclimate.com/github/jgarber623/sprockets-sass_embedded)
-[![Coverage](https://img.shields.io/codeclimate/c/jgarber623/sprockets-sass_embedded.svg?logo=code-climate&style=for-the-badge)](https://codeclimate.com/github/jgarber623/sprockets-sass_embedded/code)
 
-**A Ruby gem for processing and compressing [Sass](https://sass-lang.com) files using [Sprockets 4](https://github.com/rails/sprockets) and [Embedded Dart Sass](https://github.com/ntkme/sass-embedded-host-ruby).**
+## Getting Started
+
+Before installing and using sprockets-sass_embedded, you'll want to have [Ruby](https://www.ruby-lang.org) 2.7 (or newer) installed. Using a Ruby version managment tool like [rbenv](https://github.com/rbenv/rbenv), [chruby](https://github.com/postmodern/chruby), or [rvm](https://github.com/rvm/rvm) is recommended.
+
+sprockets-sass_embedded is developed using Ruby 2.7.8 and is tested against additional Ruby versions using [GitHub Actions](https://github.com/jgarber623/sprockets-sass_embedded/actions).
 
 ## Installation
 
-Before installing and using sprockets-sass_embedded, you'll want to have [Ruby](https://www.ruby-lang.org) 2.7 (or newer) installed. If you're using [Bundler](https://bundler.io) to manage gem dependencies, add sprockets-sass_embedded to your project's Gemfile:
+Add sprockets-sass_embedded to your project's `Gemfile` and run `bundle install`:
 
 ```ruby
-gem 'sprockets-sass_embedded'
-```
+source "https://rubygems.org"
 
-…and run `bundle install` in your shell.
-
-To install the gem manually, run the following in your shell:
-
-```sh
-gem install sprockets-sass_embedded
+gem "sprockets-sass_embedded"
 ```
 
 ## Usage
@@ -46,8 +44,8 @@ class App < Sinatra::Base
 
   register Sinatra::AssetPipeline
 
-  get '/' do
-    'Hello, world!'
+  get "/" do
+    "Hello, world!"
   end
 end
 ```
@@ -66,7 +64,7 @@ class App < Roda
          precompile: %w[application.css]
 
   route do |r|
-    r.sprockets unless opts[:environment] == 'production'
+    r.sprockets unless opts[:environment] == "production"
 
     r.root do
       render :index
@@ -79,7 +77,7 @@ run App.freeze.app
 
 ## Asset Helpers
 
-sprockets-sass-embedded includes a number of familiar helpers (e.g. `image_path`, `image_url`, `font_path`, `font_url`) that generate asset paths for use in your application. See [the `Functions` module](https://github.com/jgarber623/sprockets-sass_embedded/blob/main/lib/sprockets/sass_embedded/sass_processor.rb#L144-L318) in `lib/sprockets/sass_embedded/sass_processor.rb` for the available helpers.
+sprockets-sass_embedded includes a number of familiar helpers (e.g. `image_path`, `image_url`, `font_path`, `font_url`) that generate asset paths for use in your application. See [the `Functions` module](https://github.com/jgarber623/sprockets-sass_embedded/blob/main/lib/sprockets/sass_embedded/sass_processor.rb#L147-L321) in `lib/sprockets/sass_embedded/sass_processor.rb` for the available helpers.
 
 ```scss
 @font-face {
