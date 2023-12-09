@@ -18,15 +18,16 @@ module Sprockets
           @functions
             .public_instance_methods
             .each_with_object({}) do |symbol, obj|
-              parameters = instance.method(symbol)
-                                   .parameters
-                                   .filter_map { |parameter| "$#{parameter.last}" if parameter.first == :req }
+              parameters = instance
+                             .method(symbol)
+                             .parameters
+                             .filter_map { |parameter| "$#{parameter.last}" if parameter.first == :req }
 
               obj["#{symbol}(#{parameters.join(', ')})"] = ->(args) { instance.public_send(symbol, *args) }
             end
         end
 
-        alias_method :to_h, :to_hash
+        alias to_h to_hash
 
         private
 
