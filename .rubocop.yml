@@ -13,7 +13,3 @@ Layout/HashAlignment:
 # Checks if examples contain too many `expect` calls.
 RSpec/MultipleExpectations:
   Max: 2
-
-# Enforces the use of either `#alias` or `#alias_method`.
-Style/Alias:
-  EnforcedStyle: prefer_alias_method
