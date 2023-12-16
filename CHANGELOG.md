@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 / 2023-12-15
+
+- 2827e74 - Configure RubyGems trusted publishing (#5)
+- 8c20919 - Add scheduled event trigger (#4)
+- 300091a - Configure IRBRC environment variable
+- af176ef - RuboCop config-related updates (#3)
+
 ## 0.2.0 / 2023-12-08
 
 - a233f04 - Remove upper bound on `required_ruby_version`
