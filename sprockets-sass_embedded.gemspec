@@ -16,8 +16,8 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"].reject { |f| File.directory?(f) }
-  spec.files        += %w[LICENSE CHANGELOG.md README.md]
-  spec.files        += %w[sprockets-sass_embedded.gemspec]
+  spec.files        += ["LICENSE", "CHANGELOG.md", "README.md"]
+  spec.files        += ["sprockets-sass_embedded.gemspec"]
 
   spec.require_paths = ["lib"]
 
