@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 / 2023-12-30
+
+- fb9d9c5 - Add `source_code_uri` to metadata
+
 ## 0.2.1 / 2023-12-15
 
 - 2827e74 - Configure RubyGems trusted publishing (#5)
